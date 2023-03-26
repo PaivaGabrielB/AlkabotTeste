@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import axios from 'axios';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { Button } from 'reactstrap';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +13,7 @@ root.render(
   </React.StrictMode>
 );
 
-function App() {
+function App(props) {
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
   const [comments, setComments] = useState([]);
@@ -60,9 +61,9 @@ function App() {
       <ul>
         {posts.map(post => (
           <li key={post.id}>
-            <button onClick={() => setSelectedPost(post)}>
+            <Button size="sm" onClick={() => setSelectedPost(post)}>
               {post.title}
-            </button>
+            </Button>
           </li>
         ))}
       </ul>
@@ -96,9 +97,9 @@ function App() {
       <ul>
         {users.map(user => (
           <li key={user.id}>
-            <button onClick={() => setSelectedUser(user)}>
+            <Button size="sm" onClick={() => setSelectedUser(user)}>
               {user.name}
-            </button>
+            </Button>
           </li>
         ))}
       </ul>
