@@ -1,5 +1,5 @@
 Instalar dependências
-npm install
+- npm install
 
 Rodar o projeto
-npm start
+- npm start
